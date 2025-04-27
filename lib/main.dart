@@ -26,3 +26,9 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+class Mu {
+  void mu() {
+    print("object");
+  }
+}
