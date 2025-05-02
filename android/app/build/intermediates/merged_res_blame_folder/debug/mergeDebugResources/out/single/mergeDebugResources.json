@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-xhdpi_ic_launcher_background.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-hdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-hdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-mdpi_ic_launcher_background.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-mdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-mdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-mdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-hdpi_ic_launcher_background.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/drawable_launch_background.xml.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/drawable/launch_background.xml"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-xxhdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-xxhdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-xxxhdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-xxxhdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-xxxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-xxhdpi_ic_launcher_background.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-xhdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-xhdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "com.FitLife.fitlife.app-debug-40:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.FitLife.fitlife.app-main-42:/mipmap-xxxhdpi/ic_launcher.png"
+    }
+]

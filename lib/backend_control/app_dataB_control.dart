@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-import '../widgets/event_showing_window.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Map<String, dynamic> userProfileInfo = {
@@ -17,31 +15,11 @@ void fillFromSharedPref() async {
   }
 }
 
-// for home page popular workouts section showing
-final popularWorkouts = [
-  eventShowingWindow("assets/images/upperWorkout.jpg", 300, 250, [
-    "Upper Body",
-    "Training",
-  ]),
-  eventShowingWindow("assets/images/backWorkout.jpg", 300, 250, [
-    "Back Body",
-    "Training",
-  ]),
-  eventShowingWindow("assets/images/man_with_dumbel.jpg", 300, 250, [
-    "Lower Body",
-    "Training",
-  ]),
-  eventShowingWindow("assets/images/fullWorkout.jpg", 300, 250, [
-    "Full Body",
-    "Training",
-  ]),
-];
-
 // filter option in discovery-page floating nav
 final category = {
-  "Body": CupertinoIcons.hammer_fill,
-  "Muscle": CupertinoIcons.hammer_fill,
-  "Equipment": CupertinoIcons.hammer_fill,
+  "Body": "assets/images/icons/standing-human-body.png",
+  "Muscle": "assets/images/icons/arm.png",
+  "Equipment": "assets/images/icons/dumb-bell.png",
 };
 
 // filter options for search case (used in discovery page)
@@ -94,16 +72,34 @@ final itemONCategory = [
   ],
 ];
 
+// favorites for discovery
 Set<String> favoriteDescovery = {};
 
 void controlFavoriteDescovery(String id, bool mode) {
   if (mode) {
     favoriteDescovery.add(id);
-    print(favoriteDescovery);
   } else {
     favoriteDescovery.remove(id);
   }
 
+  // call a notifier function after creating
+}
+
+List<Map<String, dynamic>> favoriteHome = [];
+// this is for home page
+bool checkAlradySelectedFav(String name) {
+  for (var item in favoriteHome) {
+    if (name == item["name"]) return true;
+  }
+  return false;
+}
+
+void controlfavoriteHome(Map<String, dynamic> item, bool mode) {
+  if (mode && !checkAlradySelectedFav(item["name"])) {
+    favoriteHome.add(item);
+  } else {
+    favoriteHome.removeWhere((itemo) => itemo["name"] == item["name"]);
+  }
   // call a notifier function after creating
 }
 

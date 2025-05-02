@@ -8,9 +8,9 @@ class SettingPage extends StatelessWidget {
   const SettingPage({super.key});
 
   String bmiText(double bmi) {
-    if (bmi < 18.5)
+    if (bmi < 18.5) {
       return "*Focuse on gaining weight!";
-    else if (bmi > 24.9)
+    } else if (bmi > 24.9)
       return "*Focuse on losing some weight!";
     else
       return "*Focuse on maintainig your body!";
@@ -23,7 +23,7 @@ class SettingPage extends StatelessWidget {
       children: [
         Container(
           width: screenSize.width - 20,
-          height: screenSize.height / 4,
+          height: screenSize.height / 3,
           padding: EdgeInsets.all(5),
           margin: EdgeInsets.all(10),
           decoration: BoxDecoration(
@@ -55,8 +55,8 @@ class SettingPage extends StatelessWidget {
               Row(
                 children: [
                   Container(
-                    width: 100,
-                    height: 100,
+                    width: screenSize.width / 4,
+                    height: screenSize.height / 9,
                     margin: EdgeInsets.only(right: 15, bottom: 15),
                     decoration: BoxDecoration(
                       border: Border.all(

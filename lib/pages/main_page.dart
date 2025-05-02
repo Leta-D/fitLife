@@ -30,22 +30,11 @@ class MainPage extends StatelessWidget {
         backgroundColor: mainBlackGenerator(0.9),
         elevation: 5,
         shadowColor: secondGreenGenerator(0.7),
-        leading: Image.asset("assets/images/fitLifeLogo.png"),
-        leadingWidth: 90,
-        title: Text("FitLife"),
-        titleTextStyle: TextStyle(
-          fontWeight: FontWeight.bold,
-          color: mainGreenGenerator(1),
-          fontSize: 30,
-          letterSpacing: 5,
+        centerTitle: true,
+        title: SizedBox(
+          height: screenSize.height / 10.1,
+          child: Image.asset("assets/images/appLogo.png", fit: BoxFit.fill),
         ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(CupertinoIcons.moon_fill),
-            color: mainBlackGenerator(1),
-          ),
-        ],
       ),
 
       body: Container(

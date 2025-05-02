@@ -1,8 +1,6 @@
 import 'package:fitlife/theme/theme_dataShip.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:fitlife/backend_control/app_state_control.dart';
 
 // this fun depends on alertState parameter to show error or success
 // content and target are list holding content at index 0 for success and

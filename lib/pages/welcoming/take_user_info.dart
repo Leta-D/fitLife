@@ -1,5 +1,4 @@
 import 'package:fitlife/pages/main_page.dart';
-import 'package:fitlife/pages/welcoming/starting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -59,25 +58,20 @@ class TakeRegistry extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      // SizedBox(
-                      //   width: 100,
-                      //   height: 100,
-                      //   child: Image.asset("assets/images/fitLifeLogo.png"),
-                      // ),
-                      Text(
-                        "FitLife",
-                        style: TextStyle(
-                          color: mainGreenGenerator(1),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 35,
-                        ),
+                      SizedBox(
+                        width: screenSize.width / 2,
+                        height: screenSize.height / 9.15,
+                        child: Image.asset("assets/images/appLogo.png"),
                       ),
                     ],
                   ),
                   SizedBox(height: 20),
                   Text(
                     "Fill the following to get Started!  ",
-                    style: TextStyle(color: mainWhiteGenerator(1)),
+                    style: TextStyle(
+                      color: mainWhiteGenerator(1),
+                      fontSize: screenSize.width / 20.6,
+                    ),
                   ),
                   SizedBox(height: 20),
                   TextField(
@@ -125,8 +119,17 @@ class TakeRegistry extends StatelessWidget {
                       appProvider.addUserNameToMap();
 
                       if (appProvider.checkUserProfileData()) {
-                        for (var item in userProfileInfo.entries) {
-                          print(item.value);
+                        // for (var item in userProfileInfo.entries) {
+                        //   print(item.value);
+                        // }
+                        if (userProfileInfo["weight"] == null) {
+                          userProfileInfo["weight"] = 70;
+                        }
+                        if (userProfileInfo["height"] == null) {
+                          userProfileInfo["height"] = 120;
+                        }
+                        if (userProfileInfo["gender"] == null) {
+                          userProfileInfo["gender"] = "male";
                         }
                         storeToPreferences(userProfileInfo);
                         // getFromPreferences("userName");

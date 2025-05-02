@@ -22,13 +22,7 @@ class MyApp extends StatelessWidget {
         "mainPage": (_) => MainPage(),
         // "detailWorkout": (_) => WorkoutShowingPage(),
       },
-      home: MainPage(),
+      home: StartWelcomePage(),
     );
-  }
-}
-
-class Mu {
-  void mu() {
-    print("object");
   }
 }

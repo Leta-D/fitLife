@@ -1,5 +1,4 @@
 import 'package:fitlife/backend_control/app_dataB_control.dart';
-import 'package:fitlife/backend_control/app_state_control.dart';
 import 'package:fitlife/pages/main_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,35 +11,26 @@ class StartWelcomePage extends StatelessWidget {
   bool _isNewUser = true;
   Future<void> isNewUserPref() async {
     final prefer = await SharedPreferences.getInstance();
-    print(prefer.get("isNewUser"));
+    // print(prefer.get("isNewUser"));
     _isNewUser = prefer.getBool("isNewUser")!;
   }
 
-  // only testing function
-  Future<void> isNewUserPrefDispo() async {
-    final prefer = await SharedPreferences.getInstance();
-    prefer.remove("isNewUser");
-  }
-
   StartWelcomePage({super.key}) {
-    print("User first time checked");
+    // print("User first time checked");
     isNewUserPref();
     fillFromSharedPref();
   }
   @override
   Widget build(BuildContext context) {
-    Size screenSiz = MediaQuery.sizeOf(context);
+    Size screenSize = MediaQuery.sizeOf(context);
     return Scaffold(
       body: Stack(
         children: [
           Container(color: mainBlackGenerator(1)),
           Image.asset(
-            "images/muscular_man_noBack.png",
-            colorBlendMode: BlendMode.softLight,
-            width: screenSiz.width,
-            height: screenSiz.height,
-            // color: Color.fromRGBO(139, 227, 7, 1),
-            color: mainBlackGenerator(1),
+            "assets/images/StartPageBackground.jpg",
+            // width: screenSize.width,
+            // height: screenSize.height,
             fit: BoxFit.cover,
           ),
 
@@ -51,7 +41,7 @@ class StartWelcomePage extends StatelessWidget {
                 // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    height: 100,
+                    height: screenSize.height / 3.67,
                     width: 2,
                     color: mainGreenGenerator(1),
                   ),
@@ -59,7 +49,7 @@ class StartWelcomePage extends StatelessWidget {
                     "WELCOME",
                     style: TextStyle(
                       color: mainWhiteGenerator(0.9),
-                      fontSize: 60,
+                      fontSize: screenSize.width / 6.86,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -67,7 +57,7 @@ class StartWelcomePage extends StatelessWidget {
                     "to",
                     style: TextStyle(
                       color: secondGreenGenerator(1),
-                      fontSize: 40,
+                      fontSize: screenSize.width / 10.3,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -75,12 +65,12 @@ class StartWelcomePage extends StatelessWidget {
                     "FitLife !",
                     style: TextStyle(
                       color: mainGreenGenerator(1),
-                      fontSize: 40,
+                      fontSize: screenSize.width / 10.3,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Container(
-                    height: 200,
+                    height: screenSize.height / 3,
                     width: 2,
                     color: mainGreenGenerator(1),
                   ),

@@ -1,3 +1,4 @@
+import 'package:fitlife/widgets/event_showing_window.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:fitlife/theme/theme_dataShip.dart';
 import 'package:fitlife/widgets/listed_item_frame.dart';
@@ -8,6 +9,28 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // for home page popular workouts section showing
+    final popularWorkouts = [
+      eventShowingWindow(context, "assets/images/upperWorkout.jpg", 300, 250, [
+        "Upper Body",
+        "Training",
+      ]),
+      eventShowingWindow(context, "assets/images/backWorkout.jpg", 300, 250, [
+        "Back Body",
+        "Training",
+      ]),
+      eventShowingWindow(
+        context,
+        "assets/images/man_with_dumbel.jpg",
+        300,
+        250,
+        ["Lower Body", "Training"],
+      ),
+      eventShowingWindow(context, "assets/images/fullWorkout.jpg", 300, 250, [
+        "Full Body",
+        "Training",
+      ]),
+    ];
     return ListView(
       children: [
         SizedBox(height: 20),
@@ -78,7 +101,17 @@ class HomePage extends StatelessWidget {
           ),
         ),
 
-        for (int i = 0; i < 10; i++) ListedItemFrame(),
+        // final imgUrl = "assets/images/upperWorkout.jpg";
+        // final name = "Push Up";
+        // final target = "target upper ";
+        // final steps = ["Pull and I ", "Pull and I ", "Pull and I "];
+        for (int i = 0; i < 10; i++)
+          ListedItemFrame(
+            "assets/images/upperWorkout.jpg",
+            "Push Up",
+            "target upper ",
+            ["Pull and I ", "Pull and I ", "Pull and I "],
+          ),
 
         SizedBox(height: 75),
       ],

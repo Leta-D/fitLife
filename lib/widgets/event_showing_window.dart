@@ -1,12 +1,16 @@
+import 'package:fitlife/backend_control/app_state_control.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../theme/theme_dataShip.dart';
 
 Widget eventShowingWindow(
+  BuildContext context,
   String imageUrl,
   double width,
   double height,
   List<String> texts,
 ) {
+  final appProvider = Provider.of<AppStateControl>(context);
   return Container(
     margin: EdgeInsets.only(left: 10, right: 10),
     decoration: BoxDecoration(
@@ -47,7 +51,11 @@ Widget eventShowingWindow(
           ),
         ),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            appProvider.change_currentBottomNavIndex(1);
+            // appProvider.offset = 0;
+            // appProvider.change_specifier_offset(0, value);
+          },
           style: ButtonStyle(
             backgroundColor: WidgetStateProperty.all(mainGreenGenerator(0.8)),
             shape: WidgetStateProperty.all(

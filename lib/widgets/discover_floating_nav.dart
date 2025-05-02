@@ -4,8 +4,9 @@ import 'package:provider/provider.dart';
 import '../backend_control/app_state_control.dart';
 import 'package:fitlife/theme/theme_dataShip.dart';
 
-Widget discoverFloatingNav(Map<String, IconData> items, BuildContext context) {
+Widget discoverFloatingNav(Map<String, String> items, BuildContext context) {
   final appProvider = Provider.of<AppStateControl>(context);
+  Size screenSize = MediaQuery.sizeOf(context);
   return Row(
     mainAxisSize: MainAxisSize.min,
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -22,13 +23,17 @@ Widget discoverFloatingNav(Map<String, IconData> items, BuildContext context) {
                     List.of(items.keys).indexOf(item),
                   );
                 },
-                icon: Icon(
-                  items[item],
-                  color:
-                      (appProvider.currentDiscoverNavIndex ==
-                              List.of(items.keys).indexOf(item))
-                          ? mainGreenGenerator(1)
-                          : mainBlackGenerator(1),
+                icon: SizedBox(
+                  height: screenSize.height / 18.3,
+                  width: screenSize.width / 8.24,
+                  child: Image.asset(
+                    items[item]!,
+                    color:
+                        (appProvider.currentDiscoverNavIndex ==
+                                List.of(items.keys).indexOf(item))
+                            ? mainGreenGenerator(1)
+                            : mainBlackGenerator(1),
+                  ),
                 ),
               ),
               Text(
@@ -39,7 +44,7 @@ Widget discoverFloatingNav(Map<String, IconData> items, BuildContext context) {
                               List.of(items.keys).indexOf(item))
                           ? mainGreenGenerator(1)
                           : mainBlackGenerator(1),
-                  fontSize: 20,
+                  fontSize: screenSize.width / 22.88,
                 ),
               ),
             ],

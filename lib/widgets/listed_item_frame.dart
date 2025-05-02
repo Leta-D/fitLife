@@ -1,25 +1,20 @@
+import 'package:fitlife/backend_control/app_dataB_control.dart';
+import 'package:fitlife/backend_control/app_state_control.dart';
 import 'package:fitlife/theme/theme_dataShip.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fitlife/pages/workout_showing_page.dart';
+import 'package:provider/provider.dart';
 
-class ListedItemFrame extends StatefulWidget {
-  const ListedItemFrame({super.key});
+class ListedItemFrame extends StatelessWidget {
+  String imgUrl, name, target;
+  List steps;
+  ListedItemFrame(this.imgUrl, this.name, this.target, this.steps, {super.key});
 
-  @override
-  createState() => _ListedItemFrameSate();
-}
-
-class _ListedItemFrameSate extends State<ListedItemFrame> {
-  final imgUrl = "assets/images/upperWorkout.jpg";
-  final name = "Push Up";
-  final target = "target upper ";
-  final steps = ["Pull and I ", "Pull and I ", "Pull and I "];
-
-  bool _isFavorite = false;
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.sizeOf(context);
+    final appProvider = Provider.of<AppStateControl>(context);
     return SingleChildScrollView(
       scrollDirection:
           (screenSize.width < 344) ? Axis.horizontal : Axis.vertical,
@@ -69,12 +64,16 @@ class _ListedItemFrameSate extends State<ListedItemFrame> {
             ),
             IconButton(
               onPressed: () {
-                setState(() {
-                  _isFavorite = !_isFavorite;
-                });
+                appProvider.homeFavoriteState(!appProvider.isFavorite);
+                controlfavoriteHome({
+                  "imgUrl": imgUrl,
+                  "name": name,
+                  "target": target,
+                  "steps": steps,
+                }, appProvider.isFavorite);
               },
               icon:
-                  (_isFavorite)
+                  (appProvider.isFavorite)
                       ? Icon(CupertinoIcons.heart_fill)
                       : Icon(CupertinoIcons.heart),
               color: mainGreenGenerator(1),

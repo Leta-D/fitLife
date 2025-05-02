@@ -36,7 +36,7 @@ class AppStateControl extends ChangeNotifier {
 
   // Home
 
-  int _currentBottomNavIndex = 3;
+  int _currentBottomNavIndex = 0;
   get currentBottomNavIndex => _currentBottomNavIndex;
 
   void change_currentBottomNavIndex(int index) {
@@ -63,6 +63,13 @@ class AppStateControl extends ChangeNotifier {
   void change_specifier_offset(int offset, String specifier) {
     _offSet = offset;
     _specifier = specifier;
+    notifyListeners();
+  }
+
+  bool _isFavorite = false;
+  get isFavorite => _isFavorite;
+  void homeFavoriteState(bool value) {
+    _isFavorite = value;
     notifyListeners();
   }
 }

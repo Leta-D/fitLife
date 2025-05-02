@@ -37,20 +37,9 @@ class DiscoverPage extends StatelessWidget {
                           appProvider.specifier,
                         );
                       },
-                      icon: Row(
-                        children: [
-                          Icon(
-                            CupertinoIcons.refresh_circled_solid,
-                            color: mainGreenGenerator(1),
-                          ),
-                          Text(
-                            "Refresh",
-                            style: TextStyle(
-                              color: mainWhiteGenerator(1),
-                              fontSize: 20,
-                            ),
-                          ),
-                        ],
+                      icon: Icon(
+                        CupertinoIcons.refresh_circled_solid,
+                        color: mainGreenGenerator(1),
                       ),
                     ),
                     // from widget for search and dropdown handler

@@ -91,15 +91,18 @@ class WorkoutShowingPage extends StatelessWidget {
                       color: mainWhiteGenerator(1),
                     ),
                   ),
-                  Container(
-                    padding: EdgeInsets.only(top: 10, bottom: 10),
-                    width: screenSize.width - screenSize.width / 8.23,
-                    child: Text(
-                      name,
-                      softWrap: true,
-                      style: TextStyle(
-                        color: mainWhiteGenerator(1),
-                        fontSize: 18,
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Container(
+                      padding: EdgeInsets.symmetric(vertical: 10),
+                      width: screenSize.width - screenSize.width / 7,
+                      child: Text(
+                        name,
+                        softWrap: true,
+                        style: TextStyle(
+                          color: mainWhiteGenerator(1),
+                          fontSize: 18,
+                        ),
                       ),
                     ),
                   ),
